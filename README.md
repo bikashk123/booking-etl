@@ -25,7 +25,7 @@
    import findspark
    findspark.init()
 
-  # Initialize spark sesssion
+  #### Initialize spark sesssion
   import pyspark
   from pyspark.sql import SparkSession
   spark = SparkSession.builder.appName("bookings-etl").getOrCreate()
