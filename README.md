@@ -10,8 +10,9 @@
 7. Download the winutils.exe for the version of hadoop against which your Spark installation.
    https://github.com/steveloughran/winutils
    
-7. Create hadoop/bin directory inside C:\Users\<your_user_name>\Desktop\spark\SPARK_HOME.
-8. Create a system environment variable in windows.
+7. Create hadoop\bin directory inside C:\Users\<your_user_name>\Desktop\spark\SPARK_HOME.
+8. Place "winutils.exe" file in "C:\Users\<your_user_name>\Desktop\spark\SPARK_HOME\hadoop\bin" directory.
+9. Create a system environment variable in windows.
    
    Define User variable path:
      SPARK_HOME: C:\Users\<your_user_name>\Desktop\spark\SPARK_HOME
@@ -21,7 +22,7 @@
      SPARK_HOME: C:\Users\<your_user_name>\Desktop\spark\SPARK_HOME
      HADOOP_HOME: %SPARK_HOME%\hadoop
      
-9. Test Spark From Jupyter Notebook.
+10. Test Spark From Jupyter Notebook.
    import findspark
    findspark.init()
 
@@ -29,5 +30,9 @@
 import pyspark
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("bookings-etl").getOrCreate()
-   
-   
+
+### Steps To Run Notebook
+1. Follow the above steps to setup spark in your local windows machine.
+2. Place hostel.csv data and hostel_booking_etl.ipynb at the same folder.
+3. Start Jupyter Notebook and open hostel_booking_etl.ipynb to run the code.
+4. Run each cell using shift+enter     
